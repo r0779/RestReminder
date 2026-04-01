@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="休息提醒"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启提醒"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="8dp" />
+
+    <Switch
+        android:id="@+id/switchReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:textSize="18sp"
+        android:checked="false"
+        android:thumbTint="#4CAF50"
+        android:trackTint="#E0E0E0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提醒间隔 (分钟)"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editTextInterval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="30"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存设置"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/buttonPause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="暂停"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:backgroundTint="#FF9800"
+            android:layout_marginEnd="8dp"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/buttonResume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="恢复"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:backgroundTint="#2196F3"
+            android:layout_marginStart="8dp"
+            android:enabled="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="状态: 已关闭"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textViewNextReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下次提醒: 未设置"
+        android:textSize="16sp"
+        android:textColor="#666666" />
+
+</LinearLayout>
