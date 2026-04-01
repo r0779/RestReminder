@@ -1,0 +1,35 @@
+Rest Reminder - 快速开始指南
+============================
+
+最简单的方法编译 APK：
+=====================
+
+步骤 1: 打开 Android Studio
+步骤 2: File -> Open -> 选择 RestReminder 文件夹
+步骤 3: 等待 Gradle 同步完成（首次 5-10 分钟）
+步骤 4: Build -> Build Bundle(s) / APK(s) -> Build APK(s)
+步骤 5: 右下角点击 "locate" 查看 APK
+
+完成！APK 在: app\build\outputs\apk\debug\app-debug.apk
+
+---
+
+需要帮助？查看以下文件：
+
+- 编译APK-快速步骤.txt  - 详细步骤说明
+- 本地编译指南.md       - 完整技术文档
+- 开始编译.bat           - 交互式编译助手
+
+---
+
+项目信息:
+- 应用名称: Rest Reminder (休息提醒)
+- 包名: com.example.restreminder
+- 最低版本: Android 8.0 (API 26)
+- 编译输出: app-debug.apk
+
+---
+
+快速安装到手机:
+1. USB 连接 + Android Studio 点击 Run 按钮
+2. 或将 app-debug.apk 传到手机手动安装

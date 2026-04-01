@@ -1,0 +1,96 @@
+=========================================
+    在 Android Studio 中编译 APK
+=========================================
+
+步骤 1: 打开项目
+----------------
+1. 启动 Android Studio
+2. 点击 "Open" 或选择 File -> Open
+3. 浏览到: C:\Users\roro\Desktop\RestReminder
+4. 选择 RestReminder 文件夹
+5. 点击 "OK"
+
+步骤 2: 等待 Gradle 同步
+-----------------------
+1. 首次打开项目会自动开始 Gradle 同步
+2. 等待底部进度条完成（可能需要 5-10 分钟）
+3. 如果同步失败，尝试:
+   - File -> Invalidate Caches -> Invalidate and Restart
+   - 或点击 "Try Again"
+
+步骤 3: 构建 APK
+----------------
+方法 A - 使用菜单:
+1. 选择菜单: Build -> Build Bundle(s) / APK(s) -> Build APK(s)
+2. 等待构建完成（底部会显示进度）
+
+方法 B - 使用快捷键:
+1. 按 Ctrl + F9
+2. 等待构建完成
+
+步骤 4: 查找 APK
+----------------
+1. 构建完成后，右下角会弹出通知
+2. 点击通知中的 "locate" 链接
+3. 或直接打开文件夹:
+   app\build\outputs\apk\debug\app-debug.apk
+
+=========================================
+    常见问题解决
+=========================================
+
+问题 1: SDK 位置未设置
+----------------------
+解决:
+1. File -> Project Structure
+2. 左侧选择 "SDK Location"
+3. 设置路径为: C:\Users\roro\AppData\Local\Android\Sdk
+4. 点击 "Apply" 和 "OK"
+
+问题 2: Gradle 下载失败
+-----------------------
+解决:
+1. 检查网络连接
+2. 或配置代理:
+   - 打开 gradle.properties 文件
+   - 添加:
+     systemProp.http.proxyHost=你的代理地址
+     systemProp.http.proxyPort=你的代理端口
+     systemProp.https.proxyHost=你的代理地址
+     systemProp.https.proxyPort=你的代理端口
+
+问题 3: JDK 版本不匹配
+---------------------
+解决:
+1. File -> Project Structure
+2. 左侧选择 "SDK Location"
+3. JDK location 选择 Android Studio 自带的 JDK
+4. 或设置 JAVA_HOME 环境变量
+
+=========================================
+    快速安装到手机
+=========================================
+
+方法 A - 通过 USB:
+-----------------
+1. 手机开启"开发者选项"
+2. 开启"USB调试"
+3. 用 USB 连接电脑
+4. 在 Android Studio 中点击绿色三角形 Run 按钮
+
+方法 B - 手动安装:
+-----------------
+1. 将 app-debug.apk 传到手机
+2. 在手机设置中开启"允许未知来源"
+3. 点击 APK 文件安装
+
+=========================================
+    项目信息
+=========================================
+
+应用名称: Rest Reminder
+包名: com.example.restreminder
+最低版本: Android 8.0 (API 26)
+目标版本: 最新 Android 版本
+
+=========================================
